@@ -1,0 +1,6 @@
+//By city
+db.rest.find({city:"Oxford"})
+/by city perticualar rest
+db.rest.find({city:"Oxford",_id: ObjectId("5b3656034bdf555e934858fd")})
+//by city sort BY name
+db.rest.aggregate([{$match:{city:"Oxford",_id: ObjectId("5b3656034bdf555e934858fd")}},{$sort:{name:1}}])
